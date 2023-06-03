@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExemploRadioCheckButton</string>
+    <string name="spinner_prompt">Selecione uma opção</string>
+
+</resources>

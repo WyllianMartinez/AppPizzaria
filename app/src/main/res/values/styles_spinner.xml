@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/backgroud_spinner</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:dropDownVerticalOffset">32dp</item>
+        <item name="android:dropDownHorizontalOffset">-8dp</item>
+        <item name="android:popupElevation">8dp</item>
+    </style>
+
+
+</resources>

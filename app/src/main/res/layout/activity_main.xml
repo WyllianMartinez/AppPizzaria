@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tela_fundo"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_toolbar"
+        android:title="Pedido de Pizzaria"
+        android:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Dados da Pizza"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/backgroud_listview"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Selecionar tamanho:"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/rbGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPequena"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="selecionarOpcao"
+                    android:text="Pequena " />
+
+                <RadioButton
+                    android:id="@+id/rbMedia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="selecionarOpcao"
+                    android:text="Média" />
+
+                <RadioButton
+                    android:id="@+id/rbGrande"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="selecionarOpcao"
+                    android:text="Grande" />
+            </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Selecionar Sabores:"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spSabor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:padding="15dp"
+                style="@style/SpinnerStyle" />
+
+            <ListView
+                android:id="@+id/lvSabor"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/backgroud_listview" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginVertical="10dp">
+
+            <Button
+                android:id="@+id/btnRemover"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Remover Sabor"
+                android:backgroundTint="@color/red"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/backgroud_listview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <CheckBox
+                    android:id="@+id/cbBorda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Com Borda" />
+
+                <CheckBox
+                    android:id="@+id/cbRefri"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Refrigerante" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seu Pedido:"
+                android:layout_margin="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvPedido"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@drawable/backgroud_listview"
+                android:paddingVertical="0dp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:background="@drawable/backgroud_listview"
+                android:paddingVertical="0dp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginVertical="30dp">
+            <Button
+                android:id="@+id/btnConcluir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Concluir"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/verde"/>
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Limpar"
+                android:backgroundTint="@color/purple_700"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
